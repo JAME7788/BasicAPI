@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:layout/pages/detail.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,18 +19,23 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(20),
           //เรียกใช้งานjson
           child: FutureBuilder(
-            builder: (context, snapshot) {
-              var data = json.decode(snapshot.data.toString());
+            builder: (context, AsyncSnapshot snapshot) {
+              //<== ใส่ AsyncSnapshot หน้า snapshot
+              // var data = json.decode(snapshot.data.toString()); <== jsonในเครื่อง ใส่snapshot.ได้หน้าดาต้า
               return ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
-                  return MyBox(data[index]['title1'], data[index]['title2'],
-                      data[index]['Image_URL'], data[index]['detail']);
+                  return MyBox(
+                      snapshot.data[index]['title1'],
+                      snapshot.data[index]
+                          ['title2'], //<== snapshot.ได้หน้าดาต้า
+                      snapshot.data[index]['Image_URL'],
+                      snapshot.data[index]['detail']);
                 },
-                itemCount: data.length,
+                itemCount: snapshot.data.length,
               );
             },
-            future:
-                DefaultAssetBundle.of(context).loadString('assets/data.json'),
+            future: getData(),
+            // DefaultAssetBundle.of(context).loadString('assets/data.json'), <== jsonในเครื่อง
           )),
     );
   }
@@ -87,5 +94,15 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
+  }
+
+//APi จาก web
+  Future getData() async {
+    //https://raw.githubusercontent.com/JAME7788/BasicAPI/main/data.json
+    var url = Uri.https(
+        'raw.githubusercontent.com', '/JAME7788/BasicAPI/main/data.json');
+    var response = await http.get(url);
+    var result = json.decode(response.body);
+    return result;
   }
 }
