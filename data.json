@@ -1,0 +1,20 @@
+[
+    {
+        "title1" : "Arduino",
+        "title2" : "ฟหก่ฟหวก",
+        "Image_URL":"https://images.unsplash.com/photo-1557855506-3619a44bab73?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
+        "detail": "Arduino คือ \nโครงการที่นำชิปไอซีไมโครคอนโทรลเลอร์ตระกูลต่างๆ มาใช้ร่วมกันในภาษา C ซึ่งภาษา C นี้เป็นลักษณะเฉพาะ คือมีการเขียนไลบารี่ของ Arduino ขึ้นมาเพื่อให้การสั่งงานไมโครคอนโทรลเลอร์ที่แตกต่างกัน สามารถใช้งานโค้ดตัวเดียวกันได้ โดยตัวโครงการได้ออกบอร์ดทดลองมาหลายๆรูปแบบ"
+    },
+    {
+        "title1" : "NodeMCU ESP 32",
+        "title2" : "ฟหก่ฟหวก",
+        "Image_URL":"https://images.unsplash.com/photo-1553406830-f6e44ac97624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80",
+        "detail": "โมดูล Wifi ESP-32 รุ่น ESP-WROOM-32 โมดูล \n Wifi + Bluetooth 4.2 + Touch/Temp Sensorทำงานแบบ Dual Core ที่ความเร็ว 160Mhz มี SRAM 512K หน่วยความจำ Flash สำหรับอัพโหลดโปรแกรมขนาด 16M มีขา GPIO 36 ขา ความละเอียดในการอ่านค่า ADC 12Bit  สามารถเขียนโปรแกรม ผ่าน Arduino IDE เหมือนเขียน Arduino ได้"
+    },
+    {
+        "title1" : "Raspberry pi",
+        "title2" : "ฟหก่ฟหวก",
+        "Image_URL":"https://images.unsplash.com/photo-1553406830-f6e44ac97624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80",
+        "detail": "Raspberry Pi (ออกเสียงว่า ราส-เบอร์-รี่-พาย) \nเป็นเครื่องคอมพิวเตอร์ขนาดจิ๋ว ที่มีขนาดเพียงเท่ากับบัตรเครดิต ที่สำคัญคือ ราสเบอร์รี่พายนี้มีราคาที่ถูกมาก เมื่อเทียบกับคอมพิวเตอร์เดสก์ท็อปปกติ คือมีราคาเพียงแค่หนึ่งพันกว่าบาทเท่านั้นเอง!!! แต่เห็นราคาเท่านี้ ทำงานได้เหมือนเครื่องคอมพิวเตอร์ทุกอย่างเลยนะครับ"
+    }
+]
